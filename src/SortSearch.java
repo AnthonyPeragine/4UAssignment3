@@ -14,6 +14,7 @@ public class SortSearch {
         array[p1] = array[p2];
         array[p2] = temp;
     }
+
     public void swapString(String[] array, int p1, int p2) {
         String temp = array[p1];
         array[p1] = array[p2];
@@ -88,21 +89,20 @@ public class SortSearch {
         //return the completed sorted array
         return answer;
     }
-    
+
     //problem 5
-    
-    public void stringInsertionSort(String[] array){
+    public void stringInsertionSort(String[] array) {
         // start going through the array
-        for(int i = 0; i < array.length - 1; i++){
+        for (int i = 0; i < array.length - 1; i++) {
             // store position
             int position = i;
             // check values beside each other 
             //if value is greater than zero, array[position] is before array[position+1] 
-            while(position >= 0 && array[position].compareTo(array[position + 1]) > 0 ){
-               // if out of place, swap it downwards
-               // until correct position is reached 
-               swapString(array, position, position + 1);
-               position--;
+            while (position >= 0 && array[position].compareTo(array[position + 1]) > 0) {
+                // if out of place, swap it downwards
+                // until correct position is reached 
+                swapString(array, position, position + 1);
+                position--;
             }
         }
     }
@@ -203,12 +203,12 @@ public class SortSearch {
         int[] ans = test.countingSort(numbers2);
         for (int i = 0; i < numbers2.length; i++) {
             System.out.println(ans[i]);
-                
-            
-            }
-        
+
+
+        }
+
         System.out.println("------------------------------");
-        
+
         String[] words = new String[10];
         words[0] = "B";
         words[1] = "A";
@@ -220,16 +220,16 @@ public class SortSearch {
         words[7] = "S";
         words[8] = "F";
         words[9] = "Y";
-        
+
         System.out.println("BEFORE");
-        for(int i = 0; i < words.length; i++){
+        for (int i = 0; i < words.length; i++) {
             System.out.println(words[i]);
         }
-        
+
         test.stringInsertionSort(words);
-        
+
         System.out.println("AFTER");
-        for(int i = 0; i < words.length; i++){
+        for (int i = 0; i < words.length; i++) {
             System.out.println(words[i]);
         }
 
